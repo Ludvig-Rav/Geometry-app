@@ -1,6 +1,7 @@
 import math
 print("Hello and welcome")
 choice = "yes"
+result = []
 
 def cube_vol (a):
     v = a ** 3
@@ -22,6 +23,8 @@ while choice == "yes":
         print("Enter cm of one side of the cube")
         a = int(input())
         volume = cube_vol(a)
+        result.append("Cc")
+        result.append(volume)
         print(f"The volume of the cube is: {volume} ");
         print("Do you want to go again? yes or no. ")
         choice = input("")
@@ -30,6 +33,8 @@ while choice == "yes":
         print("enter cm of the sides of the tetrahedron")
         a = int(input())
         volume = tri_vol(a)
+        result.append("T")
+        result.append(volume)
         print(f"The volume of the tetrahedron is: {volume} ")
         print("Do you want to go again? yes or no. ")
         choice = input("")
@@ -38,9 +43,15 @@ while choice == "yes":
         print("enter cm of the sides of the octagon")
         a = int(input())
         volume = oct_vol(a)
+        result.append("O")
+        result.append(volume)
         print(f"The volume of the octagon is: {volume} ")
         print("Do you want to go again? yes or no. ")
         choice = input("")
+
+    seeResult = input("Do you want to see the result? (y/n) ")
+    if seeResult == "y":
+        print(f"This is the results so far {result}")
 
 if choice == "no":
     print("Hasta la vista!")
