@@ -23,7 +23,7 @@ while choice == "yes":
         print("Enter cm of one side of the cube")
         a = int(input())
         volume = cube_vol(a)
-        result.append("Cc")
+        result.append("C")
         result.append(volume)
         print(f"The volume of the cube is: {volume} ");
         print("Do you want to go again? yes or no. ")
