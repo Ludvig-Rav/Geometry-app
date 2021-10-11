@@ -14,6 +14,10 @@ def oct_vol (a):
     v = (2*(1+(math.sqrt(2)))*a*a)
     return v
 
+def squere_vol(s):
+    v = s**3
+    return v
+
 def show_menu():
     print("\n===========================================")
     print("|                  Welcome                |")
@@ -21,7 +25,8 @@ def show_menu():
     print("|         1. Calculate V of a cube        |")
     print("|         2. Calculate V of a tetrahedron |")
     print("|         3. Calculate V of a octagon     |")
-    print("|         4. Exit                         |")
+    print("|         4. Calculate V of a squere      |")
+    print("|         5. Exit                         |")
     print("===========================================")
 
 
@@ -54,7 +59,14 @@ while True:
         result.append(volume)
         print(f"The volume of the octagon is: {volume} ")
 
-    elif menu_choice == 4:
+    elif menu_choice ==4:
+        s = int(input("enter cm of the sides of the squere "))
+        volume = squere_vol(s)
+        result.append("S")
+        result.append(volume)
+        print(f"The volume of the squere is: {volume} ")
+
+    elif menu_choice == 5:
         seeResult = input("Do you want to see the result? (y/n) ")
         if seeResult == "y":
             print(f"This is the volumes you have calculated: {result}")
